@@ -554,6 +554,15 @@ img{
     border-radius: 50%;
 }
 
+.qualification__rounder-sub{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: var(--first-color-lighter);
+    border-radius: 50%;
+
+}
+
 .qualification__line{
     display: block;
     width: 1px;
