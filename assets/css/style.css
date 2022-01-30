@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Poppins:wght@400;500;600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 :root {
     --header-height: 3rem;
 
@@ -18,7 +17,7 @@
     --container-color: #FFF;
 
     /*  Font  */
-    --body-font: 'Nanum Gothic', sans-serif;
+    --body-font: 'Noto Sans KR', sans-serif;
     --body-color: #FFF;
     /*  'Poppins', sans-serif; */
 
@@ -54,11 +53,10 @@
 /* Font size for Large devices */
 @media screen and (min-width: 968px) {
     :root {
-        --big-font-size: 3rem;
         --h1-font-size: 2.25rem;
         --h2-font-size: 1.5rem;
         --h3-font-size: 1.25rem;
-        --normal-font-size: 1rem;
+        /* --normal-font-size: 1rem; */
         --small-font-size: .875rem;
         --smaller-font-size: .813rem;
     }
@@ -358,6 +356,10 @@ img{
 
 .about__description{
     text-align: center;
+    margin-bottom: var(--mb-0-5);
+}
+
+.about__description-bottom{
     margin-bottom: var(--mb-2-5);
 }
 
@@ -396,7 +398,7 @@ img{
 .skills__header{
     display: flex;
     align-items: center;
-    margin-bottom: var(--mb-2-5);
+    margin-bottom: var(--mb-1);
     cursor: pointer;
 }
 
@@ -473,6 +475,32 @@ img{
     transform: rotate(-180deg);
 }
 
+.skills__data {
+    
+}
+.skills__item {
+    display: flex;
+    flex-direction: column;
+}
+.skills__img{
+    width: 50px;
+    margin-left: var(--mb-1);
+    position: relative;
+    float: left;
+    margin-top: var(--mb-1);
+}
+
+.skills__img p {
+    text-align: center;
+    font-size: var(--smaller-font-size);
+}
+
+.skills_text{
+    display: inline-block;
+    width: 50px;
+    margin-left: var(--mb-1);
+}
+
 /* QUALIFICATION */
 .qualification__tabs{
     display: flex;
@@ -509,12 +537,13 @@ img{
 .qualification__subtitle{
     display: inline-block;
     font-size: var(--small-font-size);
-    margin-bottom: var(--mb-1);
+    margin-bottom: var(--mb-0-5);
 }
 
 .qualification__calendar{
     font-size: var(--smaller-font-size);
     color: var(--text-color-light);
+    margin-bottom: var(--mb-2);
 }
 
 .qualification__rounder{
@@ -664,8 +693,27 @@ img{
     margin-bottom: var(--mb-0-75);
 }
 
+.portfolio__button {
+    margin-top: var(--mb-0-5);
+}
+
 .portfolio__button:hover .button__icon{
     transform: translateX(.25rem)
+}
+
+.portfolio__icon {
+    font-size: 2.5rem;
+    color: var(--first-color);
+}
+
+.portfolio__icon:hover {
+    color: var(--first-color-alt)
+}
+
+.portfolio__icon-skill {
+    margin-top: var(--mb-1);
+    margin-right: var(--mb-0-25);
+    width: 1.5rem;
 }
 
 /* 기존 아이콘 제거  */
@@ -704,6 +752,8 @@ img{
 /* CONTACT */
 .contact__container{
     row-gap: 3rem;
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
 }
 
 .contact__information{
@@ -725,6 +775,14 @@ img{
 .contact__subtitle{
     font-size: var(--small-font-size);
     color: var(--text-color-light);
+}
+
+.contact__mail{
+    color: var(--text-color-light)
+}
+
+.contact__mail:hover{
+    color: var(--first-color-alt);
 }
 
 /* FOOTER */
@@ -905,11 +963,11 @@ img{
         display: block;
     }
     .home__scroll-button{
-        margin-left: 3rem;
+        /* margin-left: 3rem; */
     }
     
     .about__container{
-        column-gap: 5rem;
+        column-gap: 3rem;
     }
     .about__img{
         width: 350px;
